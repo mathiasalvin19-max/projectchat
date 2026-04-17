@@ -1,6 +1,6 @@
 {
   "name": "lineAi",
   "description": "A powerful AI assistant inspired by Manus AI, capable of coding, image generation, and complex reasoning.",
-  "requestFramePermissions": [],
+  "requestFramePermissions": ["microphone"],
   "majorCapabilities": ["AI Chat", "Code Preview", "Image Generation"]
 }

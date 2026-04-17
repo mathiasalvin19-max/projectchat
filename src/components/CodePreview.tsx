@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { X, Maximize2, Minimize2, RefreshCw } from 'lucide-react';
-import { cn } from '@/src/lib/utils';
 
 interface CodePreviewProps {
   code: string;
@@ -46,14 +45,8 @@ export function CodePreview({ code, language, onClose }: CodePreviewProps) {
   }, [code, language]);
 
   return (
-    <div className={cn(
-      "fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-all duration-300",
-      isFullscreen ? "p-0" : "p-4 sm:p-8"
-    )}>
-      <div className={cn(
-        "bg-[#0a0a0a] border border-[#262626] shadow-2xl flex flex-col overflow-hidden transition-all duration-300",
-        isFullscreen ? "w-full h-full rounded-none" : "w-full max-w-5xl h-[80vh] rounded-2xl"
-      )}>
+    <div className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm transition-all duration-300 ${isFullscreen ? 'p-0' : 'p-4 sm:p-8'}`}>
+      <div className={`bg-[#0a0a0a] border border-[#262626] shadow-2xl flex flex-col overflow-hidden transition-all duration-300 ${isFullscreen ? 'w-full h-full rounded-none' : 'w-full max-w-5xl h-[80vh] rounded-2xl'}`}>
         <div className="flex items-center justify-between px-4 py-3 border-b border-[#262626] bg-[#171717]">
           <div className="flex items-center gap-3">
             <div className="flex gap-1.5">
